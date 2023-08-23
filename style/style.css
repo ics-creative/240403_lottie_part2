@@ -1,0 +1,83 @@
+/* ---------- レイアウト ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --color-black: #222;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  background-color: white;
+}
+
+@media (min-width: 769px) {
+  body {
+    place-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ----------  ---------- */
+.player-s {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.searchBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #2589d0;
+  border-radius: 42px;
+}
+
+.searchBox_text{
+  width: 360px;
+  padding: 5px 24px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+.searchBox_button{
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border-radius: 50%;
+}
+
+.skeletonScreen {
+  width: 360px;
+  height: 200px;
+  background-color: aliceblue;
+}
+
+.skeletonScreen.isLoading {
+  background-color: #aaa;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lottie | 実装編サンプル</title>
+
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+
+  <script type="module" src="scripts/index.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+  <lottie-player
+      loop hover speed="1.5"
+      src="./lottie/search-anim.json"
+      class="player-s"
+  ></lottie-player>
+
+  <form method="get" action="#" class="searchBox">
+    <label class="searchBox_label">
+      <input class="searchBox_text" type="text" size="25" placeholder="キーワードを入力">
+    </label>
+
+    <button type="button" id="search-button" class="searchBox_button">
+      <span id="lottie-search" class="player-s"></span>
+    </button>
+  </form>
+
+  <div id="search-result" class="skeletonScreen">
+    結果
+  </div>
+</div>
+</body>
+</html>
