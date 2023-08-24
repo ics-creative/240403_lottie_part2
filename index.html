@@ -15,24 +15,37 @@
 
 <body>
 <div class="wrapper">
-  <lottie-player
-      loop hover speed="1.5"
-      src="./lottie/search-anim.json"
-      class="player-s"
-  ></lottie-player>
-
-  <form method="get" action="#" class="searchBox">
-    <label class="searchBox_label">
-      <input class="searchBox_text" type="text" size="25" placeholder="キーワードを入力">
+  <form method="get" action="#" class="search-box">
+    <label class="search-box__label">
+      <input id="search-text" class="search-box_text" type="text" placeholder="キーワードを入力"
+             minlength="1" required aria-required="true">
     </label>
 
-    <button type="button" id="search-button" class="searchBox_button">
+    <button type="submit" id="search-button" class="search-box_button">
       <span id="lottie-search" class="player-s"></span>
     </button>
   </form>
 
-  <div id="search-result" class="skeletonScreen">
-    結果
+  <div id="search-result" class="result-area">
+    <div id="search-status" class="box box__m"></div>
+    <lottie-player
+        loop hover speed="2"
+        src="./lottie/search-anim.json"
+        class="box box__l"
+    ></lottie-player>
+    <div class="box"></div>
+    <lottie-player
+        loop hover
+        src="./lottie/search-anim.json"
+        class="box"
+    ></lottie-player>
+    <div class="box box__m"></div>
+    <lottie-player
+        loop hover speed="3"
+        src="./lottie/search-anim.json"
+        class="box box__m"
+    ></lottie-player>
+    <div class="box box__l"></div>
   </div>
 </div>
 </body>

@@ -1,4 +1,3 @@
-/* ---------- レイアウト ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,76 +7,135 @@
   --color-black: #222;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
-  display: grid;
   background-color: white;
-}
-
-@media (min-width: 769px) {
-  body {
-    place-content: center;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #222;
+    background-color: var(--color-black);
   }
 }
 
 .wrapper {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 64px;
+  gap: 120px;
+  align-items: center;
+  padding: 20vh 32px 32px;
 }
 
-/* ----------  ---------- */
+@media (width < 769px) {
+  .wrapper {
+    padding: 20vh 16px 16px;
+  }
+}
+
 .player-s {
   display: block;
   width: 60px;
   height: 60px;
 }
 
-.searchBox{
+.search-box {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  justify-content: space-between;
   border: 2px solid #2589d0;
   border-radius: 42px;
 }
 
-.searchBox_text{
-  width: 360px;
-  padding: 5px 24px;
-  border: none;
+@media (width < 769px) {
+  .search-box {
+    width: 100%;
+  }
+}
+
+.search-box_text {
   box-sizing: border-box;
-  font-size: 1em;
+  width: 360px;
+  height: 100%;
+  padding: 32px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 42px 0 0 42px;
   outline: none;
 }
 
-.searchBox_button{
+@media (width < 769px) {
+  .search-box_text {
+    width: 100%;
+    min-width: 200px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-box_text {
+    color: white;
+    background-color: var(--color-black);
+  }
+}
+
+.search-box_button {
   padding: 12px;
+  appearance: none;
+  cursor: pointer;
   background-color: transparent;
   border: none;
-  cursor: pointer;
-  outline: none;
-  appearance: none;
   border-radius: 50%;
+  outline: none;
 }
 
-.skeletonScreen {
-  width: 360px;
+.search-box_button:focus-visible {
+  outline: solid 2px #2589d0;
+}
+
+.result-area {
+  max-width: 900px;
+  column-count: 3;
+}
+
+@media (width < 769px) {
+  .result-area {
+    width: 100%;
+    column-count: 2;
+  }
+}
+
+.result-area.isLoading {
+  opacity: 0.5;
+}
+
+.box {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  background-color: #eee;
+  border-radius: 20px;
+  break-inside: avoid;
+}
+
+@media (prefers-color-scheme: dark) {
+  .box {
+    background-color: #aaa;
+  }
+}
+
+#search-status {
+  display: grid;
+  place-items: center;
+  font-size: 2em;
+}
+
+.box__s {
+  height: 150px;
+}
+
+.box__m {
   height: 200px;
-  background-color: aliceblue;
 }
 
-.skeletonScreen.isLoading {
-  background-color: #aaa;
+.box__l {
+  height: 300px;
 }
