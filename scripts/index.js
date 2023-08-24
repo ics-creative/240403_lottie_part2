@@ -35,13 +35,15 @@ const onSearch = async (anim, result) => {
   const statusText = document.querySelector("#search-status");
   anim.play();
   result.classList.add("isLoading");
-  statusText.innerText="検索中";
+  statusText.innerText = "検索中…";
 
   await delay(2000);
 
+  result.style.display = "block";
+
   anim.stop();
   result.classList.remove("isLoading");
-  statusText.innerText="結果";
+  statusText.innerText = "結果";
 };
 
 const delay = (ms) => {

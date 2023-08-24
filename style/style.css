@@ -92,6 +92,7 @@ body {
 }
 
 .result-area {
+  display: none;
   max-width: 900px;
   column-count: 3;
 }
