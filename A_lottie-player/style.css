@@ -8,20 +8,29 @@
 }
 
 body {
-  color: #222;
+  color: var(--color-black);
   background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
+    color: white;
     background-color: var(--color-black);
   }
 }
 
+code {
+  display: block;
+  padding: 8px;
+  font-family: courier, monospace;
+  background-color: #9494942d;
+  border-radius: 3px;
+}
+
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  gap: 48px;
+  grid-template-columns: repeat(auto-fit, 224px);
+  gap: 32px;
   place-content: center;
   place-items: center;
   justify-content: center;
@@ -30,15 +39,18 @@ body {
 }
 
 .itemWrapper {
-  position: relative;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 8px;
   width: 100%;
-  padding-top: 30px;
+  padding: 16px;
+  border: solid 1px #ddd;
+  border-radius: 8px;
 }
 
-.itemWrapper > span {
-  position: absolute;
-  top: 0;
+.itemWrapper > p {
   width: 100%;
-  font-size: 1rem;
+  padding-bottom: 8px;
   text-align: center;
 }

@@ -3,100 +3,134 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lottie | 実装編サンプル</title>
+  <title>Lottie | 実装編サンプル（ウェブコンポーネント）</title>
 
   <link rel="stylesheet" href="./style.css">
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-  <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.3.0/dist/dotlottie-player.mjs"></script>
+  <!-- ▼lottie-player用 -->
+  <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- ▼dotLottie-player用 -->
+  <script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"></script>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="itemWrapper">
-      <span>▼ 0.5倍速</span>
+      <p>0.5倍速</p>
       <lottie-player
           autoplay loop speed="0.5"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop speed="0.5"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 等倍速</span>
+      <p>等倍速</p>
       <lottie-player
           autoplay loop
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 2倍速</span>
+      <p>2倍速</p>
       <lottie-player
           autoplay loop speed="2"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop speed="2"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 3回だけ再生</span>
+      <p>3回だけ再生</p>
       <lottie-player
           autoplay loop count="3"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop count="3"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 逆再生</span>
+      <p>逆再生</p>
       <lottie-player
           autoplay loop direction="-1"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop direction="-1"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 順↔︎逆再生の繰り返し</span>
+      <p>順↔︎逆再生の繰り返し</p>
       <lottie-player
           autoplay loop mode="bounce"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop mode="bounce"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 5秒間休んで再生</span>
+      <p>5秒間休んで再生</p>
       <lottie-player
           autoplay loop intermission="5000"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop intermission="5000"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ 背景色指定</span>
+      <p>背景色指定</p>
       <lottie-player
           autoplay loop background="#eef"
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop background="#eef"
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ コントローラー表示</span>
+      <p>コントローラー表示</p>
       <lottie-player
           autoplay loop controls
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        autoplay loop controls
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ ホバーで動きます</span>
+      <p>ホバーでアニメーション</p>
       <lottie-player
           loop hover
           src="./../lottie/present-anim.json"
       ></lottie-player>
+      <code>
+        loop hover
+      </code>
     </div>
 
     <div class="itemWrapper">
-      <span>▼ dotLottie形式</span>
+      <p>dotLottie形式</p>
       <dotlottie-player autoplay loop src="./../lottie/present-anim.lottie"></dotlottie-player>
+      <code>
+        autoplay loop
+      </code>
     </div>
   </div>
 </body>
