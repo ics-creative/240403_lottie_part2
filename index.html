@@ -15,16 +15,19 @@
 
 <body>
 <div class="wrapper">
-  <form method="get" action="#" class="search-box">
-    <label class="search-box__label">
-      <input id="search-text" class="search-box_text" type="text" placeholder="キーワードを入力"
-             minlength="1" required aria-required="true">
-    </label>
+<!--  TODO 削除-->
+  <search>
+    <form method="get" action="#" class="search-box">
+      <label class="search-box__label">
+        <input id="search-text" class="search-box_text" type="text" placeholder="キーワードを入力"
+               minlength="1" required aria-required="true">
+      </label>
 
-    <button type="submit" id="search-button" class="search-box_button">
-      <span id="lottie-search" class="player-s"></span>
-    </button>
-  </form>
+      <button type="submit" id="search-button" class="search-box_button">
+        <span id="lottie-search" class="player-s"></span>
+      </button>
+    </form>
+  </search>
 
   <div id="search-result" class="result-area">
     <div id="search-status" class="box box__m"></div>
@@ -45,7 +48,8 @@
         src="./lottie/search-anim.json"
         class="box box__m"
     ></lottie-player>
-    <div class="box box__l"></div>
+    <div class="box box__s"></div>
+    <div class="box box__m"></div>
   </div>
 </div>
 </body>
