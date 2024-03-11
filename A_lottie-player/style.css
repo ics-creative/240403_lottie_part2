@@ -25,12 +25,13 @@ code {
   font-family: courier, monospace;
   background-color: #9494942d;
   border-radius: 3px;
+  overflow-x: auto;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 224px);
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, 236px);
+  gap: 16px;
   place-content: center;
   place-items: center;
   justify-content: center;
@@ -53,4 +54,10 @@ code {
   width: 100%;
   padding-bottom: 8px;
   text-align: center;
+}
+
+/* lottie-playerのシークバーカスタム */
+lottie-player {
+  --lottie-player-seeker-track-color: #7bfcce ;
+  --lottie-player-seeker-thumb-color: #4c8fed ;
 }
