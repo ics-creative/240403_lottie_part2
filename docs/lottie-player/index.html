@@ -10,6 +10,8 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <!-- ▼dotLottie-player用 -->
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+  <!-- ▼dotLottie-wc用 -->
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
 </head>
 
 <body>
@@ -123,9 +125,15 @@
     </div>
 
     <div class="itemWrapper">
-      <p>dotLottie形式</p>
+      <p>dotlottie-player</p>
       <dotlottie-player autoplay loop src="../assets/present-anim.lottie"></dotlottie-player>
-      <code>autoplay loop</code>
+      <code>&lt;dotlottie-player autoplay loop src="略"&gt;&lt;/dotlottie-player&gt;</code>
+    </div>
+
+    <div class="itemWrapper">
+      <p>dotlottie-wc</p>
+      <dotlottie-wc autoplay loop style="height: 236px;" src="../assets/present-anim.lottie"></dotlottie-wc>
+      <code>&lt;dotlottie-wc autoplay loop src="略"&gt;&lt;/dotlottie-wc&gt;</code>
     </div>
   </div>
 </body>
