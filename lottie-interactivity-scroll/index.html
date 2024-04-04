@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lottie実装編 | lottie-interactivity（scroll）</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- ▼lottie-player用 -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- ▼lottie-interactivity用 -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+  <p>▼スクロール連動</p>
+  <div class="itemWrapper">
+    <lottie-player
+        id="lottie-scroll-driven"
+        src="/assets/cat.json"
+    ></lottie-player>
+  </div>
+</div>
+
+<div class="wrapper">
+  <p>▼スクロールトリガー</p>
+  <div class="itemWrapper">
+    <lottie-player
+        id="lottie-scroll-trigger"
+        src="/assets/cat.json"
+    ></lottie-player>
+    </div>
+</div>
+
+<script>
+  // スクロール量と連動するアニメーションの作例
+  LottieInteractivity.create({
+    player: "#lottie-scroll-driven", // lottie-playerに追加したid
+    mode: "scroll", // スクロールイベント
+    actions: [
+      {
+        visibility: [0, 1],
+        type: "seek",
+        frames: [0, 217],
+      },
+    ],
+  });
+
+  // スクロールトリガーアニメーションの作例
+  LottieInteractivity.create({
+    player: "#lottie-scroll-trigger",
+    mode: "scroll", // スクロールイベント
+    actions: [
+      {
+        visibility: [0.5, 1], // ビューポートの50%まで来たら再生
+        type: "playOnce", // 一度再生
+      },
+    ],
+  });
+</script>
+</body>
+</html>

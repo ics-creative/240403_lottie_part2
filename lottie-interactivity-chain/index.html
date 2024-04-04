@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lottie | 実装編サンプル（js）</title>
-
+  <title>Lottie実装編 | lottie-interactivity（chain）</title>
   <link rel="stylesheet" href="./style.css">
 
   <!-- ▼lottie-player用 -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <!-- ▼lottie-interactivity用 -->
   <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-
-  <script type="module" src="./index.js"></script>
 </head>
 
 <body>
-<div class="wrapper">
-
-  <div class="itemWrapper">
-    <p>click</p>
-    <lottie-player
-        id="lottie"
-        src="https://lottie.host/6bed0136-e3d6-42be-ab92-fcb3f29e3cf4/a8u7RGCyP6.json"
-    ></lottie-player>
-  </div>
+<div class="itemWrapper">
+  <lottie-player
+      id="lottie"
+      src="/assets/cat.json"
+  ></lottie-player>
 </div>
+
+<script src="index.js"></script>
 </body>
 </html>
