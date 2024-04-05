@@ -7,5 +7,6 @@ body {
 }
 
 .itemWrapper {
+  height: 90%;
   cursor: pointer;
 }
